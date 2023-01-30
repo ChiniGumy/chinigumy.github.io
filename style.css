@@ -1,0 +1,736 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scrollbar-width: auto;
+	scrollbar-color: #333333 ;
+}
+
+:root {
+	--black-background : #262626;
+
+	--white-text: #d3d3d3;
+	--white-soft: #919191;
+
+	--code-red-icon: #cf342c;
+	--code-green-icon: #40a04e;
+	--code-yellow-icon: #e5ac30;
+
+	--code-blue: #3b72b5;
+	--code-red: #c83e3e;	;
+	--code-purple: #a85c9b;
+	--code-orange: #ce6647;
+	--code-green: #84b45c;
+}
+
+.info-screen::-webkit-scrollbar {
+	width: 8px;
+}
+
+.info-screen::-webkit-scrollbar-track {
+	background: #ffffff00;
+	width: 8px;
+}
+
+.info-screen::-webkit-scrollbar-thumb {
+	background-color: #99999985;
+	border-radius: 0;
+}
+
+body {
+	font-size: 16px;
+	height: 100vh;
+	font-family: 'roboto';
+	display: flex;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.fade-animation {
+	animation: fadeIn 800ms;
+}
+
+.non-visible {
+	display: none !important;
+}
+
+.non-selectable {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none; 
+	-khtml-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.glass {
+	-webkit-backdrop-filter: blur( 11.5px );
+	background: rgba(10, 10, 10, 0.6);
+	backdrop-filter: blur( 11.5px );
+	border-radius: 20px;
+}
+
+.light-glass {
+	background: rgba(15, 15, 15, 0.4);
+	border-radius: 20px;
+}
+
+.darker-glass {
+	-webkit-backdrop-filter: blur( 11.5px );
+	background: rgba(10, 10, 10, .8);
+	backdrop-filter: blur( 11.5px );
+}
+
+#background {
+	position: fixed;
+	object-fit: cover;
+	height: 100vh;
+	width: 100vw;
+}
+
+#card {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	width: 90vw;
+	height: 90vh;
+}
+
+.info-screen {
+	overflow-y: auto;
+	height: 100%;
+}
+
+.text-container {
+	padding: 40px 50px;
+}
+
+/* VsCode Bar =========================================================================*/
+
+footer {
+	border-radius: 0 0 20px 20px;
+	background: rgba(20, 20, 20, 1);
+	height: 35px;
+	width: 100%;
+	display: flex;
+	margin-top: auto;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#error-icons {
+	height: 100%;
+	display: inline-flex;
+	list-style: none;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+#error-icons li {
+	color: var(--white-soft);
+	font-size: 16px;
+	margin: 0 6px 0 20px;
+}
+
+#error-icons p {
+	color: var(--white-soft);
+	font-size: 1rem;
+}
+
+#error-icons li:first-child {
+	margin-left: 30px;
+}
+
+#option-list {
+	height: 100%;
+	list-style: none;
+	display: inline-flex;
+	align-items: center;
+}
+
+#option-list li p {
+	text-align: center;
+	font-size: 14px;
+	color: var(--white-soft);
+	height: 35px;
+	padding: 8.5px 14px;
+	width: 100%;
+}
+
+#option-list li {
+	transition: all 150ms;
+}
+
+#option-list li i:last-child {
+	text-align: center;
+	font-size: 14px;
+	color: var(--white-soft);
+	height: 35px;
+	padding: 8.5px 14px;
+	width: 100%;
+	transition: 200ms all;
+}
+
+#vscode-bar {
+	border-radius: 20px 20px 0 0;
+	background: rgba(10, 10, 10, .6);
+	height: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#vscode-bar #title {
+	text-align: center;
+	font-size: 1rem;
+	color: var(--white-text);
+	font-weight: 400;
+}
+
+#vscode-bar .icons {
+	position: absolute;
+	display: flex;
+	margin-right: 16px;
+	right: 0;
+	align-items: center;
+}
+
+#vscode-bar .icons .dot {
+	margin: 0 3px;
+	height: 1rem;
+	width: 1rem;
+	border-radius: 100%;
+}
+
+#vscode-bar #fullscreen {
+	background-color: var(--code-green-icon);
+	transition: 200ms all;
+}
+
+#vscode-bar #minimize {
+	background-color: var(--code-yellow-icon);
+	transition: 200ms all;
+}
+
+#vscode-bar #close {
+	background-color: var(--code-red-icon);
+	transition: 200ms all;
+}
+
+#vscode-bar p {
+	color: var(--white-text);
+	font-size: 64px;
+	font-weight: 600;
+	margin: 0 2px;
+	justify-content: end;
+	align-items: flex-end;
+	
+}
+
+/* Menu Bar =========================================================================*/
+
+#menu-bar {
+	display: flex;
+}
+
+#menu-bar ul {
+	width: 100%;
+	display: flex;
+}
+
+#menu-bar ul li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(10, 10, 10, .5);
+	color: var(--white-text);
+	height: 45px;
+	width: 12%;
+	list-style: none;
+	font-size: 1.2rem;
+	transition: all 300ms;
+}
+
+#menu-bar ul li:last-child {
+	user-select: none;
+	width: 52%;
+}
+
+#menu-bar .selected {
+	background: rgba(10, 10, 10, .3);
+}
+
+#menu-bar ul li:not(#no-hover):hover {
+	background-color: rgba(10, 10, 10, .1) ;
+	cursor: pointer;
+}
+
+#menu-bar .selected:hover {
+	background: rgba(10, 10, 10, .3);
+}
+
+#little-bar {
+	display: flex;
+	align-items: center;
+	background-color: rgba(10, 10, 10, .3);
+	height: 30px;
+	box-shadow: 0px 5px 7px -3px rgba(0,0,0,0.75);
+
+}
+
+#little-bar p {
+	color: var(--white-soft);
+	margin-left: 50px;
+}
+
+#little-bar img {
+	display: none;
+}
+
+/* Home Screen Information ======================================================== */
+
+#home-screen #name-container h1, #home-screen #name-container h2, #home-screen #name-container h3, #home-screen #name-container p {
+	color: var(--white-text);
+	font-family: 'Fira Code';
+}
+
+#home-screen #name-container h1 {
+	color: var(--code-blue);
+	font-size: 4.8rem;
+}
+
+#home-screen #name-container h2 {
+	font-size: 2rem;
+	margin-bottom: 30px;
+}
+
+#home-screen #name-container p {
+	margin-left: 6px;
+	color: var(--white-text);
+	font-size: 1.6rem;
+}
+
+#home-screen .text-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	justify-content: space-between;
+}
+
+#home-screen #social-medias-container  {
+	transition: all 150ms;
+}
+
+#home-screen #social-medias-container ul {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	list-style: none;
+}
+
+#home-screen #social-medias-container ul li img {
+	transition: 150ms all;
+}
+
+#home-screen #social-medias-container ul li img {
+	height: 2.5rem;
+	width: 2.5rem;
+	margin: 0 14px;
+}
+
+#home-screen #social-medias-container #discord-icon {
+	height: 3rem;
+	width: 3rem;
+	transition: 150ms all;
+}
+
+#home-screen #social-medias-container ul li img:hover {
+	scale: 1.05;
+}
+
+/* Personal Screen Information ======================================================== */
+
+#personal-sreen {
+	overflow-y: auto;
+}
+
+#personal-screen h1, #personal-screen p {
+	font-family: 'Fira Code';
+	color: var(--white-text);
+}
+
+#personal-screen h1 {
+	font-size: 4rem;
+	color: var(--code-orange);
+}
+
+#personal-screen p {
+	margin: 0px 0 0 5px;
+	width: 96%;
+	font-size: 1.5rem;
+	line-height: 46px;
+	text-align: justify;
+}
+
+/* Knowledge Screen Information ======================================================== */
+
+#knowledge-screen h1,#knowledge-screen h2, #knowledge-screen p {
+	font-family: 'Fira Code';
+	color: var(--white-text);
+}
+
+#knowledge-screen h1 {
+	font-size: 4rem;
+	color: var(--code-green);
+}
+
+#knowledge-screen p {
+	margin: 10px 0 0 5px;
+	font-size: 1.5rem;
+	text-align: justify;
+}
+
+#knowledge-screen .text-container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+#platzi-area {
+	display: flex;
+	align-items: center;
+	align-self: flex-end;
+	width: 100%;
+	height: 20%;
+}
+
+#knowledge-screen #platzi-area p {
+	margin: 0 0 0 25px;
+	font-size: 1.5rem;
+	color: var(--white-text);
+}
+
+#knowledge-screen #platzi-logo {
+	margin-left: 15px;
+	width: 8rem;
+	border-radius: 10px;
+	background-color: rgba(0,0,0,0);
+}
+
+#knowledge-screen #platzi-logo:hover {
+	scale: 1.02;
+}
+
+#icons-container {
+	margin-top: 50px;
+	height:	300px;
+	width: 100%;
+}
+
+#icons-container ul li {
+	display: inline;
+	list-style: none;
+	margin: 0px 30px;
+}
+
+#icons-container img {
+	display: inline-block;
+	width: 4.8rem;
+	transition: all 300ms;
+    user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#icons-container img:hover {
+	scale: 1.05;
+}
+
+/* Studies Screen Information ======================================================== */
+
+#studies-screen h1, #studies-screen p {
+	font-family: 'Fira Code';
+	color: var(--white-text);
+}
+
+#studies-screen h1 {
+	font-size: 4rem;
+	color: var(--code-red);
+}
+
+#studies-screen p {
+	font-size: 1.5rem;
+	width: 60%;
+	text-align: justify;
+}
+
+#studies-screen .grade-container #mobile-title {
+	display: none;
+}
+
+#studies-screen {
+	display: flex;
+	justify-content: center;
+}
+
+#studies-screen .grade-container:first-of-type {
+	justify-content: start;
+	align-items: center;
+	display: flex;
+	width: 100%;
+	margin-top: 8px;
+	height: 125px;
+}
+
+#studies-screen .grade-container {
+	transition: all 300ms;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	width: 100%;
+	margin: 20px 0;
+	height: 125px;
+}
+
+#studies-screen .grade-container h2 {
+	font-size: 2.5rem;
+	text-align: center;
+	width: 25%;
+	color: var(--code-purple);
+}
+
+#studies-screen .grade-container p {
+	width: 70%;
+	color: var(var(--white-text));
+}
+
+#studies-screen .grade-container h1 {
+	color: var(--white-soft);
+	font-size: 52px;
+}
+
+#studies-screen .grade-container:hover {
+	scale: 1.02;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-height: 600px) {
+	#home-screen #name-container h1 {
+		font-size: 4.3rem;
+	}
+}
+
+@media only screen and (max-width: 1100px) {
+
+	body, html {
+		height: 100%;
+	}
+
+	footer {
+		margin: 0;
+		border-radius: 0;
+		background: rgba(20, 20, 20, 1);
+		height: 35px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	footer #option-list li p{
+		display: none;
+	}
+
+	#error-icons li:first-child {
+		margin-left: 20px;
+	}
+
+	.info-screen {
+		overflow-y: auto;
+		height: 100%;
+	}
+
+	#menu-bar ul li {
+		width: 25%;
+		font-size: 1rem;
+	}
+
+	#menu-bar #no-hover {
+		display: none;
+	}
+
+	#card {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 0 0 0 0;
+	}
+
+	#vscode-bar {
+		border-radius: 0;
+	}
+
+	#vscode-bar #title {
+		font-size: 0.7rem;
+	}
+	
+	#vscode-bar .icons .dot {
+		height: 0.8rem;
+		width: 0.8rem;
+	}
+
+	#little-bar {
+		padding: 0 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	#little-bar p {
+		margin: 0;
+		font-size: 0.7rem;
+	}
+
+	#little-bar img {
+		display: block;
+		width: 6%;
+	}
+
+	.text-container {
+		padding: 20px 30px;
+		height: max-content;
+	}
+	
+	#home-screen #name-container h1 {
+		font-size: 4.5rem;
+		text-align: center;
+	}
+
+	#home-screen #name-container p {
+		margin: 0;
+		margin-top: 30px;
+		text-align: center;
+	}
+
+	#home-screen #social-medias-container {
+		display: flex;
+		align-self: center;
+
+	}
+
+	#home-screen .text-container #social-medias-container img {
+		width: 2.2rem;
+	}
+
+	#personal-screen {
+		display: flex;
+	}
+
+	#personal-screen h1 {
+		text-align: center;
+		font-size: 3rem;
+		margin: 0;
+		margin-bottom: 5px;
+	}
+
+	#personal-screen .text-container p {
+		margin: 0;
+		text-align: center;
+		width: 100%;
+		font-size: 1.2rem;
+		line-height: 2.5rem;
+		margin-bottom: 30px;
+	}
+
+	#knowledge-screen h1 {
+		text-align: center;
+		font-size: 3rem;
+	}
+
+	#knowledge-screen p {
+		text-align: center;
+		margin: 10px 0 0px 0;
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+	}
+
+	#knowledge-screen #icons-container {
+		display: flex;
+		justify-content: center;
+		height: 25%;
+		margin-top: 10px;
+		width: 100%;
+	}
+
+	#knowledge-screen #icons-container ul {
+		display: inline-grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		justify-items: center;
+		align-items: center;
+	}
+
+	#knowledge-screen #icons-container img {
+		width: 3rem;
+		margin: 1px;
+	}
+
+	#knowledge-screen #platzi-area {
+		margin-top: 80px;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;		
+	}
+
+	#knowledge-screen #platzi-area p {
+		margin: 0;
+		margin-bottom: 15px;
+	}
+
+	#knowledge-screen #platzi-area img {
+		margin: 0;
+	}
+
+	#studies-screen h1 {
+		font-size: 3rem;
+		text-align: center;
+	}
+
+	#studies-screen .grade-container, #studies-screen .grade-container:first-of-type {
+		flex-direction: column;
+		justify-content: center;
+		height: 20.5rem;
+	}
+
+	#studies-screen .grade-container h2 {
+		display: none;
+	}
+
+	#studies-screen .grade-container #mobile-title {
+		display: block;
+		font-size: 2rem;
+		text-align: center;
+		width: 80%;
+	}
+
+	#studies-screen .grade-container p {
+		font-size: 1.5rem;
+		line-height: 2.5rem;
+		text-align: center;
+		margin-top: 10px;
+		width: 80%;
+	}
+}

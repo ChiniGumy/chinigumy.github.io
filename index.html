@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="David Sánchez Romero" />
+	<meta name="description" content="This is my portfolio"/>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://kit.fontawesome.com/153a411e5e.js" crossorigin="anonymous"></script>
+	<title>Portfolio</title>
+</head>
+<body>
+	<img id="background" src="assets/img/nordic.webp" alt="" class="non-selectable">
+
+	<div id="card" class="glass">
+			<div id="vscode-bar">
+				<h1 id="title" class="non-selectable">David_Sanchez_Romero.portfolio</h1>
+				<div class="icons non-selectable">
+					<div class="dot" id="minimize"></div>
+					<div class="dot" id="fullscreen"></div>
+					<div class="dot" id="close"></div>
+				</div>
+			</div>
+	
+			<div id="menu-bar">
+				<ul>
+					<li id="home" class="non-selectable selected"onclick="enableDisplay(event)">Home</li><li id="personal" class="non-selectable" onclick="enableDisplay(event)">Personal</li><li id="knowledge" class="non-selectable" onclick="enableDisplay(event)">Knowledge</li><li id="studies" class="non-selectable" onclick="enableDisplay(event)">Studies</li><li id="no-hover"></li>
+				</ul>
+			</div>
+			
+			<div id="little-bar" class="non-selectable">
+				<p> C: > Users > dsebastiansr > desktop > portfolio > home.html </p>
+			</div>
+			
+			<div id="home-screen" class="fade-animation info-screen">
+				<div class="text-container">
+					<div id="name-container">
+						<h1>David Sánchez Romero</h1>
+						<p>Frontend Developer</p>
+					</div>
+					
+					<div id="social-medias-container">
+						<ul>
+							<li><a href="mailto:dsebastiansr24@gmail.com?subject=Questions" target="_blank"><img id="arroba-icon" src="assets/svg/contacts/arroba.svg" alt="Mail"></a></li>
+							<li><a href="https://www.linkedin.com/in/david-s%C3%A1nchez-romero-0496a5244/" target="_blank"><img id="linkedin-icon" src="assets/svg/contacts/linkedin.svg" alt="Linked-in"></a></li>
+							<li><a href="https://github.com/ChiniGumy/" target="_blank"><img id="github-icon" src="assets/svg/contacts/github.svg" alt="Github"> </a></li>
+							<li><a href="https://instagram.com/dsebastiansr24" target="_blank"><img id="instagram-icon" src="assets/svg/contacts/instagram.svg" alt="Instagram"></a></li>
+							<li><a href="https://discordapp.com/users/295316744828878849" target="_blank"><img id="discord-icon" src="assets/svg/contacts/discord.svg" alt="Discord"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+	
+			<div id="personal-screen" class="non-visible fade-animation info-screen">
+				<div class="text-container">
+					<h1>Hi</h1>
+					<p>
+						<!-- Me llamo David Sebastian Sánchez Romero, actualmente tengo 16 años, y estoy cursando por el 2do año de Bachillerato en Informatica. Me considero un gran lider, capaz de entender a cualquier tipo de persona. Mis conocimientos en la programación son gracias a mi hermano, el cual me ha guiado por este camino, y todo lo que he aprendido lo he hecho de forma autodidacta. Aspiro a terminar mis estudios colegiales y entrar a la universidad para poder culminar mi etapa estudiantil.
+	
+						<br><br>
+	
+						Me gusta mucho la parte de desarrollo Frontend (como se puede apreciar), pero tambien igual voy a seguir mis estudios a la parte backend. Otra rama de la cual estoy interesado es la de Game Developer. -->
+	
+						I'm David Sebastian Sánchez Romero, currently I'm 16 years old and I'm studying in the second year of high school on IT. I consider myself as a leader, able to understand everyone and guide them. My knowledge in programming is thanks of my brother, he guided me along this way, and all I've learned has been self-taughted. I aspire to finish mi high school studies and enter to college to culminate my student stage.
+	
+						<br><br>
+	
+						I like a lot the Frontend development (as you can see), but I'm also going to continue my studies at the Backend development. Another branch from the programming that I'm interested is in the Game development.
+	
+					</p>
+				</div>
+				
+			</div>
+	
+			<div id="knowledge-screen" class="non-visible fade-animation info-screen">
+				<div class="text-container">
+					<h1>Knowledge</h1>
+					<p>I've adquire a quite knowledge of Frontend development, such as:</p>
+					<div id="icons-container">
+						<ul>
+							<li><img class="non-selectable" src="assets/svg/languages/javascript.svg" alt="JavaScript"></li><li><img class="non-selectable" src="assets/svg/languages/html.svg" alt=""></li><li><img class="non-selectable" src="assets/svg/languages/css.svg" alt=""></li><li><img class="non-selectable" src="assets/svg/languages/python.svg" alt="Python"></li><li><img class="non-selectable" src="assets/svg/languages/git.svg" alt="Git"></li><li><img class="non-selectable" src="assets/svg/languages/linux.svg" alt="Linux"></li>
+						</ul>
+					</div>
+						
+						<div id="platzi-area">
+							<p>Also you can see some certifications here:</p>
+							<a href="https://platzi.com/p/dsebastiansr/" target="_blank">
+								<img src="assets/img/platzi-logo.png" alt="Platzi-logo" id="platzi-logo">
+							</a>
+						</div>
+				</div>
+			</div>
+	
+			<div id="studies-screen" class="non-visible fade-animation info-screen">
+				<div class="text-container">
+					<h1>Studies</h1>
+					<div class="grade-container light-glass">
+						<h2>High School:</h2>
+						<h2 id="mobile-title">High School</h2>
+						<p>I haven't finished my school studies yet, but I only have 1 year left to finish them.</p>
+					</div>
+	
+					<div class="grade-container light-glass">
+						<h1 class="coming-soon-title">Coming Soon</h1>
+					</div>
+	
+					<div class="grade-container light-glass">
+						<h1 class="coming-soon-title">Coming Soon</h1>
+					</div>
+				</div>
+			</div>
+	
+			<footer>
+				<ul id="error-icons">
+					<li><i class="fa-regular fa-circle-xmark icon-bar non-selectable"></i></li><p class="non-selectable">0</p>
+					<li><i class="fa-solid fa-triangle-exclamation icon-bar non-selectable"></i></li><p class="non-selectable">0</p>
+				</ul>
+				<ul id="option-list">
+					<li class="non-selectable"><p>Tab Size: 4</p></li>
+					<li class="non-selectable"><p>UTF-8</p></li>
+					<li class="non-selectable"><p>CLRF</p></li>
+					<li class="non-selectable"><p>{ } HTML</p></li>
+					<li class="non-selectable"><p>Port: 5500</p></li>
+					<li><i class="fa-regular fa-bell"></i></li>
+				</ul>
+			</footer>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
