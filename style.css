@@ -110,6 +110,7 @@ body {
 }
 
 .text-container {
+	height: 100%;
 	padding: 40px 50px;
 }
 
@@ -299,7 +300,7 @@ footer {
 
 #home-screen #name-container h1, #home-screen #name-container h2, #home-screen #name-container h3, #home-screen #name-container p {
 	color: var(--white-text);
-	font-family: 'Fira Code';
+	font-family: 'Fira Code', Consolas;
 }
 
 #home-screen #name-container h1 {
@@ -331,9 +332,11 @@ footer {
 }
 
 #home-screen #social-medias-container ul {
+	width: 100%;
 	display: flex;
 	align-items: center;
 	flex-direction: row;
+	position: relative;
 	list-style: none;
 }
 
@@ -357,6 +360,18 @@ footer {
 	scale: 1.05;
 }
 
+#home-screen #social-medias-container ul li:last-of-type {
+	font-family: 'Fira Code', Consolas;
+	color: var(--white-text);
+	position: absolute;
+	text-decoration: none;
+	right: 0;
+}
+
+#home-screen #social-medias-container ul li a {
+	color: var(--code-blue);
+}
+
 /* Personal Screen Information ======================================================== */
 
 #personal-sreen {
@@ -364,7 +379,7 @@ footer {
 }
 
 #personal-screen h1, #personal-screen p {
-	font-family: 'Fira Code';
+	font-family: 'Fira Code', Consolas;
 	color: var(--white-text);
 }
 
@@ -384,7 +399,7 @@ footer {
 /* Knowledge Screen Information ======================================================== */
 
 #knowledge-screen h1,#knowledge-screen h2, #knowledge-screen p {
-	font-family: 'Fira Code';
+	font-family: 'Fira Code', Consolas;
 	color: var(--white-text);
 }
 
@@ -460,7 +475,7 @@ footer {
 /* Studies Screen Information ======================================================== */
 
 #studies-screen h1, #studies-screen p {
-	font-family: 'Fira Code';
+	font-family: 'Fira Code', Consolas;
 	color: var(--white-text);
 }
 
@@ -633,6 +648,13 @@ footer {
 
 	#home-screen .text-container #social-medias-container img {
 		width: 2.2rem;
+	}
+
+
+	#home-screen #social-medias-container ul li:last-of-type {
+		margin-bottom: 160px;
+		text-align: center;
+		color: #878787;
 	}
 
 	#personal-screen {
