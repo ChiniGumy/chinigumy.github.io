@@ -688,6 +688,7 @@ footer {
 	}
 
 	#knowledge-screen #icons-container {
+		margin-top: 40px;
 		height: fit-content;
 	}
 
