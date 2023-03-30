@@ -711,8 +711,10 @@ footer {
 	}
 
 	#knowledge-screen #platzi-area {
+		padding: 0;
 		height: max-content;
-		margin-top: 0;
+		margin-top: auto;
+		margin-bottom: 40px;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;		
