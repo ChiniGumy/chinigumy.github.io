@@ -378,22 +378,29 @@ footer {
 	overflow-y: auto;
 }
 
-#personal-screen h1, #personal-screen p {
+#personal-screen h1, #personal-screen p, #personal-screen h2 {
 	font-family: 'Fira Code', Consolas;
 	color: var(--white-text);
 }
 
 #personal-screen h1 {
-	font-size: 4rem;
+	font-size: 3rem;
 	color: var(--code-orange);
+}
+
+#personal-screen h2 {
+	margin-top: 23px;
+	margin-bottom: 8px;
+	font-size: 1.8rem;
+	color: var(--code-purple);
 }
 
 #personal-screen p {
 	padding-bottom: 30px;
 	width: 96%;
-	font-size: 1.5rem;
-	line-height: 46px;
-	text-align: justify;
+	font-size: 1.2rem;
+	line-height: 38px;
+	
 }
 
 /* Knowledge Screen Information ======================================================== */
@@ -404,14 +411,14 @@ footer {
 }
 
 #knowledge-screen h1 {
-	font-size: 4rem;
+	font-size: 3rem;
 	color: var(--code-green);
 }
 
 #knowledge-screen p {
 	margin: 10px 0 0 5px;
-	font-size: 1.5rem;
-	text-align: justify;
+	font-size: 1.2rem;
+	line-height: 38px;
 }
 
 #knowledge-screen .text-container {
@@ -431,7 +438,7 @@ footer {
 
 #knowledge-screen #platzi-area p {
 	margin: 0 0 0 25px;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	color: var(--white-text);
 }
 
@@ -474,14 +481,14 @@ footer {
 }
 
 #studies-screen h1 {
-	font-size: 4rem;
+	font-size: 3rem;
 	color: var(--code-red);
 }
 
 #studies-screen p {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	width: 60%;
-	text-align: justify;
+	
 }
 
 #studies-screen .grade-container #mobile-title {
@@ -490,41 +497,38 @@ footer {
 
 #studies-screen {
 	display: flex;
-	justify-content: center;
 }
 
 #studies-screen .grades {
-	padding-bottom: 30px;
-}
-
-#studies-screen .grade-container:first-of-type {
-	justify-content: start;
-	align-items: center;
 	display: flex;
+	justify-content: space-between;
 	width: 100%;
-	margin-top: 8px;
-	height: 125px;
 }
 
 #studies-screen .grade-container {
 	transition: all 300ms;
 	justify-content: center;
+	flex-direction: column;
 	align-items: center;
 	display: flex;
-	width: 100%;
+	width: 32%;
+	height: 500px;
+	padding: 22px;
 	margin: 20px 0;
-	height: 125px;
 }
 
 #studies-screen .grade-container h2 {
+	display: flex;
 	font-size: 2.5rem;
 	text-align: center;
-	width: 25%;
 	color: var(--code-purple);
 }
 
 #studies-screen .grade-container p {
 	width: 70%;
+	text-align: center;
+	margin-top: 12px;
+	line-height: 32px;
 	color: var(var(--white-text));
 }
 
@@ -737,7 +741,6 @@ footer {
 	#studies-screen .grades {
 		padding-bottom: 0;
 	}
-	
 
 	#studies-screen .grade-container, #studies-screen .grade-container:first-of-type {
 		flex-direction: column;
@@ -757,7 +760,7 @@ footer {
 	}
 
 	#studies-screen .grade-container p {
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 		line-height: 2.5rem;
 		text-align: center;
 		margin-top: 10px;
