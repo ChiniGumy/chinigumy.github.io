@@ -1,0 +1,25 @@
+{
+    "profile": {
+        "download-cv": "Descargar CV",
+        "likes": "Me gusta programar y jugar futbol"
+    },
+
+    "experience": {
+        "title": "Experiencia 💼",
+        "first-title": "Frontend y UI/UX Developer - DuoData S.A. & Tesalia CBC",
+        "first-title-dates": "Marzo 2023 - Octubre 2023",
+        "first-title-description": "Siendo pasante ayudé en la elaboracion de la interfaz grafica para una herramienta de gestion para la empresa Tesalia CBC. Ademas de haber hecho la maqueta a presentar, tambien me encargue de pasarla a codigo con React y TailwindCSS.",
+
+        "second-title": "Frontend y UI/UX Developer - DuoData S.A.",
+        "second-title-dates": "Febrero 2024 - Actualidad",
+        "second-title-description": "Siendo pasante estoy a cargo de la elaboracion de una herrmienta para las urbanizaciones, la cual sirve para poder gestionar las mismas, dar mensajes comunitarios, y tener registros de accesos a la urbanizacion cerrada. Esta App esta pensada para los residentes y para la administración."
+    },
+
+    "projects": {
+        "title": "Proyectos 👷",
+        "first-project": "Si armas el cubo de Rubik rapido, con esta herramienta puedes medir cuanto te tardas!",
+        "second-project": "Plataforma web en para encontrar proyectos open source. Esta plataforma fue tomada como proyecto para el concurso &quot;Nasa SpaceApp Challenge&quot;."
+    },
+
+    "contact-title": "Contactos 📣"
+}
