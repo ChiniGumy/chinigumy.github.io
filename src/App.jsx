@@ -7,18 +7,19 @@ function App() {
     i18n
 
     return (
-        <div className="bg-gray-800 flex justify-center px-24 py-20 relative">
+        <div className="bg-gray-800 flex justify-center px-24 py-20 max-md:px-4 max-md:py-8 relative">
             <LanguageButton />
             <div className="mx-auto px-5 mb-4 max-w-3xl flex flex-col items-center">
-                <div className="flex items-center w-full">
+
+                <div className="max-md:flex-col flex items-center w-full">
                     <img
                         src="img/PFP.jpg"
                         alt=""
                         className="h-[160px] w-[160px] ring-opacity-90 object-cover rounded-[100%]"
                     />
 
-                    <div className="flex flex-col ml-7">
-                        <h1 className="text-4xl font-bold text-slate-100 mb-3">
+                    <div className="max-md:items-center flex flex-col ml-7 ">
+                        <h1 className="max-md:mt-3 max-md:text-2xl text-4xl font-bold text-slate-100 mb-3 ">
                             David Sánchez Romero
                         </h1>
                         <p className="text-lg text-slate-300">
@@ -32,7 +33,7 @@ function App() {
 
                 <hr className="border-t-2 border-gray-700 w-full my-14" />
 
-                <div className="w-full">
+                <div className="w-[80%]">
                     <h1 className="text-2xl font-bold text-slate-200">
                         {t('experience.title')}
                     </h1>
@@ -62,7 +63,7 @@ function App() {
                     </div>
                 </div>
 
-                <div className="w-full mt-24">
+                <div className="w-full mt-24 max-md:mt-20">
                     <h1 className="text-2xl font-bold text-slate-200">
                         {t('projects.title')}
                     </h1>
@@ -70,12 +71,12 @@ function App() {
                     <a
                         target="_blank"
                         rel='noreferrer'
-                        className="duration-[350ms] flex mt-8 border-2 border-gray-700 h-56 rounded-lg hover:border-gray-500 hover:translate-x-1 hover:-translate-y-1 cursor-pointer"
+                        className="duration-[350ms] flex mt-8 border-2 border-gray-700 h-56 rounded-lg hover:border-gray-500 hover:translate-x-1 hover:-translate-y-1 cursor-pointer max-md:h-auto"
                     >
                         <img
                             src="/img/Rubiks.png"
                             alt=""
-                            className="object-cover h-full w-60 rounded-tl-lg rounded-bl-lg"
+                            className="max-md:hidden object-cover h-full w-60 rounded-tl-lg rounded-bl-lg"
                         />
                         <div className="px-6 py-4 flex flex-col justify-between">
                             <div>
@@ -86,7 +87,7 @@ function App() {
                                     {t('projects.first-project')}
                                 </p>
                             </div>
-                            <div className="flex">
+                            <div className="flex max-md:mt-6">
                                 <img
                                     className="w-10 h-10"
                                     src="svg/brand-javascript.svg"
@@ -107,14 +108,15 @@ function App() {
                     </a>
 
                     <a
-                        target="_blank"
                         rel='noreferrer'
-                        className="duration-[350ms] flex mt-8 border-2 border-gray-700 h-56 rounded-lg hover:border-gray-500 hover:translate-x-1 hover:-translate-y-1 cursor-pointer"
+                        target="_blank"
+                        href='https://chinigumy.github.io/nasa-marketplace'
+                        className=" duration-[350ms] flex mt-8 border-2 border-gray-700 h-56 rounded-lg hover:border-gray-500 hover:translate-x-1 hover:-translate-y-1 cursor-pointer max-md:h-auto"
                     >
                         <img
                             src="/img/O-Science.png"
                             alt=""
-                            className="object-cover h-full w-60 bg rounded-tl-lg rounded-bl-lg"
+                            className="max-md:hidden object-cover h-full w-60 bg rounded-tl-lg rounded-bl-lg"
                         />
                         <div className="px-6 py-4 flex flex-col justify-between">
                             <div>
@@ -125,7 +127,7 @@ function App() {
                                     {t('projects.second-project')}
                                 </p>
                             </div>
-                            <div className="flex">
+                            <div className="flex max-md:mt-6">
                                 <img
                                     className="w-10 h-10 mx-2"
                                     src="/svg/brand-react.svg"
@@ -141,16 +143,16 @@ function App() {
                     </a>
                 </div>
 
-                <div className="w-full mt-24">
+                <div className="w-full mt-24 max-md:mt-20">
                     <h1 className="text-2xl font-bold text-slate-200">
                         {t('contact-title')}
                     </h1>
-                    <div className="flex mt-8">
+                    <div className="max-md:grid max-md:grid-cols-2 max-md:grid-rows-2 max-md:gap-4 flex mt-4">
                         <a
                             rel="noreferrer"
                             href="https://www.linkedin.com/in/david-s%C3%A1nchez-romero-0496a5244/"
                             target="_blank"
-                            className="duration-[350ms] border-2 border-gray-700 h-14 rounded-lg hover:border-gray-500 hover:translate-x-1 hover:-translate-y-1 cursor-pointer w-fit px-3 py-6 flex items-center text-lg"
+                            className="duration-[350ms] border-2 border-gray-700 h-14 rounded-lg hover:border-gray-500 hover:translate-x-1 hover:-translate-y-1 cursor-pointer w-fit px-3 py-6 flex items-center text-lg max-md:m-0 max-md:w-full"
                         >
                             <img
                                 src="/svg/linkedin.svg"
@@ -166,7 +168,7 @@ function App() {
                             rel="noreferrer"
                             href="https://github.com/ChiniGumy/"
                             target="_blank"
-                            className="duration-[350ms] ml-4 border-2 border-gray-700 h-14 rounded-lg hover:border-gray-500 hover:translate-x-1 hover:-translate-y-1 cursor-pointer w-fit px-3 py-6 flex items-center text-lg"
+                            className="duration-[350ms] max-md:m-0 ml-4 border-2 border-gray-700 h-14 rounded-lg hover:border-gray-500 hover:translate-x-1 hover:-translate-y-1 cursor-pointer w-fit px-3 py-6 flex items-center text-lg max-md:w-full"
                         >
                             <img src="/svg/github.svg" alt="" className="h-8" />
                             <span className="text-[#8f9191] ml-3 font-semibold">
@@ -178,7 +180,7 @@ function App() {
                             rel="noreferrer"
                             href="mailto:dsebastiansr24@gmail.com"
                             target="_blank"
-                            className="duration-[350ms] ml-4 border-2 border-gray-700 h-14 rounded-lg hover:border-gray-500 hover:translate-x-1 hover:-translate-y-1 cursor-pointer w-fit pl-3 pr-4 py-6 flex items-center text-lg"
+                            className="max-md:m-0 duration-[350ms] ml-4 border-2 border-gray-700 h-14 rounded-lg hover:border-gray-500 hover:translate-x-1 hover:-translate-y-1 cursor-pointer w-fit pl-3 pr-4 py-6 flex items-center text-lg max-md:w-full"
                         >
                             <img src="/svg/mail.svg" alt="" className="h-8" />
                             <span className="text-[#ced5db] ml-3 font-semibold">
@@ -190,10 +192,10 @@ function App() {
                             rel="noreferrer"
                             href="https://instagram.com/dsebastiansr24"
                             target="_blank"
-                            className="duration-[350ms] ml-4 border-2 border-gray-700 h-14 rounded-lg hover:border-gray-500 hover:translate-x-1 hover:-translate-y-1 cursor-pointer w-fit px-3 py-6 flex items-center text-lg"
+                            className="max-md:m-0 max-md:w-full duration-[350ms] ml-4 border-2 border-gray-700 h-14 rounded-lg hover:border-gray-500 hover:translate-x-1 hover:-translate-y-1 cursor-pointer w-fit px-3 py-6 flex items-center text-lg"
                         >
                             <img src="/svg/ig.svg" alt="" className="h-8" />
-                            <span className="text-[#cc547c] ml-3 font-semibold">
+                            <span className="text-[#cc547c] ml-3 font-semibold max-sm:text-[15px]">
                                 Instagram
                             </span>
                         </a>

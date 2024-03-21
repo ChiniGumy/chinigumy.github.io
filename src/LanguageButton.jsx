@@ -18,8 +18,8 @@ function LanguageButton() {
     }
     return (
         <div onClick={() => changeLanguage(language)}
-        className="absolute top-12 right-24 border-gray-700 hover:border-gray-500 cursor-pointer duration-[350ms] border-[4px] p-1 rounded-[100%]">
-            <img className='h-16 w-16 saturate-[1]' src={flag} alt="" />
+        className="max-md:top-8 max-md:right-6 absolute top-12 right-24 border-gray-700 hover:border-gray-500 cursor-pointer duration-[350ms] border-[4px] max-md:border-[3px] p-1 rounded-[100%]">
+            <img className='max-md:h-12 max-md:w-12  h-16 w-16 saturate-[1]' src={flag} alt="" />
         </div>
     );
 }
