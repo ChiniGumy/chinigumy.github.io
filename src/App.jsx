@@ -19,7 +19,7 @@ function App() {
                     />
 
                     <div className="max-md:items-center flex flex-col ml-7 ">
-                        <h1 className="max-md:mt-3 max-md:text-2xl text-4xl font-bold text-slate-100 mb-3 ">
+                        <h1 className="max-lg:w-[15ch] max-md:mt-3 max-md:text-2xl text-4xl  font-bold text-slate-100 mb-3 ">
                             David Sánchez Romero
                         </h1>
                         <p className="text-lg text-slate-300">
@@ -33,7 +33,7 @@ function App() {
 
                 <hr className="border-t-2 border-gray-700 w-full my-14" />
 
-                <div className="w-[80%]">
+                <div className="w-full">
                     <h1 className="text-2xl font-bold text-slate-200">
                         {t('experience.title')}
                     </h1>
