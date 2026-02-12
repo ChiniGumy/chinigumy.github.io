@@ -1,0 +1,47 @@
+---
+import Sidebar from '../layouts/Sidebar.astro';
+import MainContent from '../layouts/MainContent.astro';
+import './global.css';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Portfolio</title>
+  </head>
+  <body class="bg-bg min-h-screen antialiased">
+
+    <main class="mx-auto max-w-7xl px-6 py-24 max-md:py-12">
+
+      <div class="grid grid-cols-[18rem_2px_1fr] gap-12 max-md:gap-8 max-md:flex max-md:flex-col">
+        <div class="relative max-md:static">
+          <div class="fixed max-md:static max-md:top-0 max-md:w-full top-24 w-[18rem]">
+            <Sidebar />
+          </div>
+        </div>
+
+        <div class="relative max-md:hidden">
+          <div
+            class="fixed top-24 h-[calc(100vh-196px)] w-0.5 rounded-full bg-darker-gray"
+          >
+          </div>
+        </div>
+
+        <div class="hidden w-full max-md:flex h-0.5 bg-darker-gray"></div>
+
+        <MainContent />
+      </div>
+
+    </main>
+
+  </body>
+</html>

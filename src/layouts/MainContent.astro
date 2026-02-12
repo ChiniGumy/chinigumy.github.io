@@ -1,0 +1,75 @@
+---
+import Project from '../components/Project.astro';
+---
+
+<div class="w-full flex flex-col gap-16">
+  <section>
+    <h2 class="text-4xl font-extrabold text-white">¿Quién Soy? 🗿</h2>
+    <div class="ml-3 mt-2 flex text-lg flex-col gap-3 text-soft-white max-md:ml-0">
+      <p>
+        Ayudo a potenciar la presencia digital mediante el desarrollo de páginas
+        web que alinean mensaje, diseño y experiencia de usuario. Creo
+        soluciones que convierten productos o servicios en una necesidad real,
+        conectando de forma efectiva con el cliente ideal y transformando la
+        página web en una herramienta estratégica para la generación constante
+        de ventas.
+      </p>
+      <p>
+        Como Frontend Developer, trabajo con tecnologías modernas y estables,
+        priorizando el código limpio, la mantenibilidad y el rendimiento.
+        Aprendo con rapidez, soy receptivo al feedback y mantengo una mentalidad
+        de mejora continua para entregar resultados cada vez más sólidos y
+        eficientes.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="text-4xl font-extrabold text-white">Experiencia 💼</h2>
+
+    <div class="flex flex-col gap-1 ml-3 mt-2">
+      <div>
+        <h3 class="text-2xl font-bold text-white">
+          Frontend & UI/UX Developer - DuoData S.A. & Tesalia CBC
+        </h3>
+        <span class="text-soft-gray font-medium text-sm"
+          >Marzo 2023 - Octubre 2023</span
+        >
+      </div>
+      <p class="text-soft-white text-lg">
+        Participé activamente en el diseño y desarrollo de la interfaz gráfica
+        de una herramienta de gestión para la empresa Tesalia CBC. Fui
+        responsable tanto de la creación de la maqueta como de su implementación
+        en código utilizando ReactJS y Tailwind CSS, asegurando una experiencia
+        de usuario clara, funcional y alineada con los objetivos del proyecto.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="text-4xl font-extrabold text-white mb-3">Proyectos 👷</h2>
+    <div class="flex flex-col gap-6">
+      <Project
+        title="Filmo | Cobertura Audiovisual Estudiantil"
+        techs={['nextjs', 'tailwind', 'strapi']}
+        description="Desarrollé el sitio web de Filmo para reflejar su propuesta desde el primer vistazo: energía, creatividad y una forma diferente de contar historias en eventos estudiantiles."
+        linkTo='https://filmostudio.com'
+      />
+
+      <Project
+        title="Consultora Sinergia | Asesoria Civil"
+        techs={['astro', 'tailwind', 'strapi']}
+        description="Sitio web enfocado en un portafolio de proyectos destacados, demostrando experiencia real en obra civil y gestión. La propuesta comunica solidez profesional y confianza, respaldada por una actualización constante del contenido."
+        linkTo=''
+      />
+
+      <Project
+        title="DAZZ | Cobertura Audiovisual de Bodas y XV"
+        techs={['astro', 'tailwind', 'strapi']}
+        description="Desarrollé el sitio web de DAZZ para transmitir desde el primer momento su esencia: elegancia, emoción y una forma única de capturar bodas y quinceañeras con estilo propio."
+        linkTo=''
+      />
+
+    </div>
+  </section>
+</div>

@@ -1,0 +1,22 @@
+---
+type Props = {
+  src: string;
+  class?: string;
+  title?: string;
+};
+
+const { src, class: className = "h-8 w-8", title } = Astro.props;
+const ICONS = import.meta.glob("/src/assets/icons/**/*.svg", { as: "raw", eager: true });
+const normalized = src.replace(/^\/+/, "");
+const key = `/src/assets/icons/${normalized}`;
+const svg = ICONS[key] as string | undefined;
+---
+
+{svg ? (
+  <span
+    class={`inline-block ${className} [&>svg]:w-full [&>svg]:h-full [&>svg]:block`}
+    set:html={svg}
+    aria-hidden="true"
+    title={title}
+  />
+) : null}

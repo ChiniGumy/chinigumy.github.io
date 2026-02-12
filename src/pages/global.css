@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #161519;
+
+  --pure-white: #ffffff;
+  --pure-black: #000000;
+
+  --white: #f1eff5;
+  --soft-white: #dfdfdf;
+
+  --darker-gray: #2d2c32;
+  --soft-gray: #88868f;
+
+  --tech-nextjs: #ffffff;
+  --tech-astro: #ce46d2;
+  --tech-tailwind: #3289f3;
+  --tech-strapi: #4945FF;
+}
+
+/* cuando el modal está abierto */
+html.modal-open {
+  overflow: hidden;
+  padding-right: var(--sbw, 0px);
+}
+
+
+@theme {
+  --color-bg: var(--bg);
+
+  --color-pure-white: var(--pure-white);
+  --color-pure-black: var(--pure-black);
+
+  --color-white: var(--white);
+  --color-soft-white: var(--soft-white);
+
+  --color-darker-gray: var(--darker-gray);
+  --color-soft-gray: var(--soft-gray);
+
+  --color-tech-nextjs: var(--tech-nextjs);
+  --color-tech-astro: var(--tech-astro);
+  --color-tech-tailwind: var(--tech-tailwind);
+  --color-tech-strapi: var(--tech-strapi);
+}
+
+body {
+  font-variant-ligatures: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}

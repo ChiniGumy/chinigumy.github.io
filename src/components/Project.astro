@@ -1,0 +1,148 @@
+---
+import TechChip from "./TechChip.astro";
+
+type TechKey = "nextjs" | "astro" | "tailwind" | "strapi";
+
+interface Props {
+  title: string;
+  description: string;
+  techs: TechKey[];
+  linkTo?: string;
+}
+
+const { title, techs, linkTo, description } = Astro.props as Props;
+
+const modalId = `modal-${title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+const cardClass =
+  "ml-3 max-md:ml-0 p-3 pb-4 pl-4 rounded-xl flex flex-col gap-5 justify-between transition-all duration-300 cursor-pointer bg-darker-gray/35 hover:bg-darker-gray/75 relative";
+---
+
+{linkTo ? (
+  <a class={cardClass} href={linkTo} target="_blank" rel="noreferrer">
+    <img src="external.svg" class="w-7 absolute right-3 top-3" alt="" />
+
+    <div class="flex flex-col gap-0.5">
+      <div class="flex items-center gap-2">
+        <h3 class="text-white text-2xl font-bold">{title}</h3>
+      </div>
+      <p class="text-soft-white text-balance text-lg">{description}</p>
+    </div>
+
+    <div class="flex gap-2 w-fit flex-wrap">
+      {techs.map((t) => (
+        <TechChip tech={t} />
+      ))}
+    </div>
+  </a>
+) : (
+  <>
+    <button type="button" class={cardClass} data-open-modal={modalId}>
+      <img
+        src="external.svg"
+        class="w-7 absolute right-3 top-3 opacity-20"
+        alt=""
+      />
+
+      <div class="flex flex-col gap-0.5">
+        <div class="text-left flex items-center gap-2">
+          <h3 class="text-white text-2xl font-bold">{title}</h3>
+        </div>
+        <p class="text-soft-white text-balance text-left text-lg">{description}</p>
+      </div>
+
+      <div class="flex gap-2 w-fit flex-wrap">
+        {techs.map((t) => (
+          <TechChip tech={t} />
+        ))}
+      </div>
+    </button>
+
+    {/* MODAL */}
+    <div
+      id={modalId}
+      class="fixed inset-0 z-50 hidden items-center justify-center p-6"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby={`${modalId}-title`}
+    >
+      <button
+        type="button"
+        class="absolute inset-0 bg-pure-black/85"
+        aria-label="Cerrar"
+        data-close-modal={modalId}
+      ></button>
+
+      {/* Panel */}
+      <div class="flex items-center justify-between relative w-full max-w-md rounded-2xl border-2 border-darker-gray bg-bg p-4">
+
+        <p class="text-soft-white">
+          Este proyecto aun no se desplega {':('}
+        </p>
+
+        <button
+          type="button"
+          class="rounded-xl px-3 py-2 text-white transition-all duration-300 cursor-pointer bg-darker-gray/50 hover:bg-darker-gray"
+          data-close-modal={modalId}
+        >
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </>
+)}
+
+<!-- Script (una sola vez por página) -->
+<script is:inline>
+  const lockScroll = () => {
+    const sbw = window.innerWidth - document.documentElement.clientWidth; // scrollbar width
+    document.documentElement.style.setProperty("--sbw", `${sbw}px`);
+    document.documentElement.classList.add("modal-open");
+  };
+
+  const unlockScroll = () => {
+    document.documentElement.classList.remove("modal-open");
+    document.documentElement.style.removeProperty("--sbw");
+  };
+
+  const openModal = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.remove("hidden");
+    el.classList.add("flex");
+    lockScroll();
+  };
+
+  const closeModal = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.add("hidden");
+    el.classList.remove("flex");
+    unlockScroll();
+  };
+
+  document.addEventListener("click", (e) => {
+    const openBtn = e.target.closest?.("[data-open-modal]");
+    if (openBtn) {
+      openModal(openBtn.dataset.openModal);
+      return;
+    }
+
+    const closeBtn = e.target.closest?.("[data-close-modal]");
+    if (closeBtn) {
+      closeModal(closeBtn.dataset.closeModal);
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+
+    document.querySelectorAll('[id^="modal-"]').forEach((m) => {
+      if (!m.classList.contains("hidden")) {
+        m.classList.add("hidden");
+        m.classList.remove("flex");
+      }
+    });
+
+    unlockScroll();
+  });
+</script>

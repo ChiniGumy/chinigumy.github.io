@@ -1,0 +1,17 @@
+---
+import SocialMediaButton from '../components/SocialMediaButton.astro';
+---
+
+<div class="w-full flex flex-col gap-2 max-md:gap-4">
+  <div class="max-md:hidden w-full aspect-square rounded-xl flex items-center justify-center bg-darker-gray/30">
+    <img src="pfp.svg" class="h-42" alt="">
+  </div>
+
+  <h1 class="text-4xl text-white font-extrabold">David Sánchez Romero</h1>
+
+  <div class="flex flex-col gap-1.5 max-md:gap-3 w-full">
+    <SocialMediaButton img="github.svg" text="Github" linkTo="https://github.com/dsebastiansr" />
+    <SocialMediaButton img="ig.svg" text="Instagram" linkTo="https://github.com/dsebastiansr" />
+    <SocialMediaButton img="linkedin.svg" text="Linkedin" linkTo="https://github.com/dsebastiansr" />
+  </div>
+</div>
