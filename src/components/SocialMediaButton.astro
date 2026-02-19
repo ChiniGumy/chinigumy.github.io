@@ -3,7 +3,7 @@ import SvgIcon from "./SvgIcon.astro";
 const { img, text, linkTo } = Astro.props;
 ---
 
-<a target="_blank" href={linkTo} class="flex items-center gap-1 text-soft-gray transition-all hover:bg-darker-gray/50 hover:text-white rounded-lg p-1 duration-250 max-md:bg-darker-gray/50 max-md:w-fit max-md:px-4 max-md:py-2.5">
-  <SvgIcon src={img} class="h-7 w-7" />
-  <span class="font-semibold text-xl">{text}</span>
+<a target="_blank" href={linkTo} class="flex items-center gap-1.5 text-soft-gray transition-all hover:bg-darker-gray/50 hover:text-white rounded-lg p-1 duration-250 max-md:bg-darker-gray/50 max-md:w-fit max-md:px-4 max-md:py-2.5">
+  <SvgIcon src={img} class="h-6 w-6" />
+  <span class="font-semibold text-lg">{text}</span>
 </a>
