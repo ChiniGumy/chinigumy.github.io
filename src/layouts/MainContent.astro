@@ -50,25 +50,34 @@ import Project from '../components/Project.astro';
     <h2 class="text-3xl font-extrabold text-white mb-3">Proyectos 👷</h2>
     <div class="flex flex-col gap-6">
       <Project
-        title="Filmo | Cobertura Audiovisual Estudiantil"
-        techs={['nextjs', 'tailwind', 'strapi']}
-        description="Desarrollé el sitio web de Filmo para reflejar su propuesta desde el primer vistazo: energía, creatividad y una forma diferente de contar historias en eventos estudiantiles."
-        linkTo='https://filmostudio.com'
-      />
-
-      <Project
         title="Consultora Sinergia | Asesoria Civil"
         techs={['astro', 'tailwind', 'strapi']}
         description="Sitio web enfocado en un portafolio de proyectos destacados, demostrando experiencia real en obra civil y gestión. La propuesta comunica solidez profesional y confianza, respaldada por una actualización constante del contenido."
-        linkTo=''
+        linkTo='https://consulsinergia.com'
+        imageLogo='/sinergia.svg'
+        imageBg='#1A80D3'
+        imageLogoWidth='8rem'
       />
 
       <Project
+        title="Filmo | Cobertura Audiovisual Estudiantil"
+        techs={['astro', 'tailwind', 'strapi']}
+        description="Desarrollé el sitio web de Filmo para reflejar su propuesta desde el primer vistazo: energía, creatividad y una forma diferente de contar historias en eventos estudiantiles."
+        linkTo='https://filmostudio.com'
+        imageLogo='/filmo.svg'
+        imageBg='#000'
+        imageLogoWidth='6rem'
+      />
+
+      <!-- <Project
         title="DAZZ | Cobertura Audiovisual de Bodas y XV"
         techs={['astro', 'tailwind', 'strapi']}
         description="Desarrollé el sitio web de DAZZ para transmitir desde el primer momento su esencia: elegancia, emoción y una forma única de capturar bodas y quinceañeras con estilo propio."
         linkTo=''
-      />
+        imageLogo='/dazz.avif'
+        imageBg='#000'
+        imageLogoWidth='8rem'
+      /> -->
 
     </div>
   </section>
